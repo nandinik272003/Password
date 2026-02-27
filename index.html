@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping  Cart Counter</title>
+    <style>
+        body {
+            text-align: center;
+            }
+        .card{
+            height:580px;
+            text-align: center;
+            padding: 50px;
+            width: 350px;
+            margin: 20px auto;
+            border-radius: 20px;
+            color:black;
+            background-color:orchid;
+
+
+        }
+        
+        h2 {
+            color: black;
+            
+            }
+        
+        h3 {
+            color: green;
+            
+            
+        }
+        
+        h4 {
+            color: green;
+            
+            
+        }
+        
+        button {
+            color: red;
+            
+            
+        }
+        
+        button:hover {
+            background-color: orange;
+           
+        }
+        .a{
+            font-size: 20px;
+        }
+        .b{
+            font-size: 20px;
+        }
+        .c{
+            font-size: 20px;
+        }
+        .d{
+            font-size: 20px;
+        }
+       .e{
+        font-size:20px;
+       }
+       .x{
+        color: black;
+        font-size: 20px;
+       }
+       
+
+       
+    </style>
+
+           
+
+    
+<body>
+    <div class="card">
+    <h2 >Shopping Cart</h2>
+    <h3 class="x">Cart items: <span id="cardCount">0</span></h3>
+    <hr>
+    <div class="product-container">
+        <h4 class="a">Product 1 - Shoes</h4>
+        <button onclick="addToCart()">➕Add to Cart</button>
+        <button onclick="removeFromCart()">❌Remove from Cart</button>
+    </div>
+
+    <div class="product-container">
+        <h4 class="b">Product 2 - Bag</h4>
+        <button onclick="addToCart()">➕Add to Cart</button>
+        <button onclick="removeFromCart()">❌Remove from Cart</button>
+    </div>
+
+    <div class="product-container">
+        <h4 class="c">Product 3 - Watch</h4>
+        <button onclick="addToCart()">➕Add to Cart</button>
+        <button onclick="removeFromCart()">❌Remove from Cart</button>
+    </div>
+
+    <div class="product-container">
+        <h4 class="d">Product 4 - Cap</h4>
+        <button onclick="addToCart()">➕Add to Cart</button>
+        <button onclick="removeFromCart()">❌Remove from Cart</button>
+    </div>
+
+    <div class="product-container">
+        <h4 class="e">Product 5 - Mobile</h4>
+        <button onclick="addToCart()">➕Add to Cart</button>
+        <button onclick="removeFromCart()">❌Remove from Cart</button>
+        
+    </div>
+    </div>
+
+<script>
+        let count = 0;
+        
+        function updateCartDisplay() {
+            document.getElementById("cardCount").innerHTML = count;
+        }
+        
+        function addToCart() {
+            count++;
+            updateCartDisplay();
+        }
+        
+        function removeFromCart() {
+            if (count > 0) {
+                count--;
+                updateCartDisplay();
+            }
+        }
+    </script>
+</body>
+</html>
